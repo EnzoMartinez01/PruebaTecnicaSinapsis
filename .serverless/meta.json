@@ -33,6 +33,86 @@
       ],
       "custom": {
         "serverless-offline": {
+          "httpPort": 3000
+        }
+      }
+    },
+    "provider": {
+      "name": "aws",
+      "runtime": "nodejs18.x",
+      "region": "us-east-1",
+      "environment": {
+        "DB_HOST": "${env:DB_HOST}",
+        "DB_PORT": "${env:DB_PORT}",
+        "DB_USER": "${env:DB_USER}",
+        "DB_PASSWORD": "<REDACTED>",
+        "DB_NAME": "${env:DB_NAME}",
+        "SECRET_KEY": "<REDACTED>"
+      }
+    },
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "error": {
+      "message": "Cannot resolve '${env:DB_HOST}' variable at 'provider.environment.DB_HOST'. No value is available for this variable, and no default value was provided. Please check your variable definitions or provide a default value.",
+      "stack": "Error: Cannot resolve '${env:DB_HOST}' variable at 'provider.environment.DB_HOST'. No value is available for this variable, and no default value was provided. Please check your variable definitions or provide a default value.\n    at _ResolverManager.resolve (file:///C:/Users/Enzo%20Martinez/.serverless/releases/4.9.1/package/dist/sf-core.js:550:31867)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async #handlePlaceholderNode (file:///C:/Users/Enzo%20Martinez/.serverless/releases/4.9.1/package/dist/sf-core.js:550:30074)\n    at async file:///C:/Users/Enzo%20Martinez/.serverless/releases/4.9.1/package/dist/sf-core.js:550:27946\n    at async processNodeAndHandleCompletion (file:///C:/Users/Enzo%20Martinez/.serverless/releases/4.9.1/package/dist/sf-core.js:550:16727)",
+      "code": "MISSING_VARIABLE_RESULT"
+    },
+    "serviceRawFile": "service: campaign-api\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  region: us-east-1\r\n  environment:\r\n    DB_HOST: ${env:DB_HOST}\r\n    DB_PORT: ${env:DB_PORT}\r\n    DB_USER: ${env:DB_USER}\r\n    DB_PASSWORD: ${env:DB_PASSWORD}\r\n    DB_NAME: ${env:DB_NAME}\r\n    SECRET_KEY: ${env:SECRET_KEY}\r\n\r\nfunctions:\r\n  app:\r\n    handler: handler.server\r\n    events:\r\n      - httpApi: '*'\r\n\r\nplugins:\r\n  - serverless-offline\r\n\r\ncustom:\r\n  serverless-offline:\r\n    httpPort: 4000",
+    "command": [
+      "offline"
+    ],
+    "options": {},
+    "orgId": "db531f22-f024-4267-afd3-7bf516aeac28",
+    "orgName": "enzomartinez",
+    "userId": "smmMBCgFC2BlCY0N65",
+    "userName": "enzomartinez",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  },
+  "C:\\Users\\Enzo Martinez\\Documents\\Prueba Sinapsis\\PruebaTecnicaSinapsis\\serverless.yml": {
+    "versionFramework": "4.9.1",
+    "servicePath": "C:\\Users\\Enzo Martinez\\Documents\\Prueba Sinapsis\\PruebaTecnicaSinapsis\\serverless.yml",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "campaign-api",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "region": "us-east-1",
+        "environment": {
+          "DB_HOST": "${env:DB_HOST}",
+          "DB_PORT": "${env:DB_PORT}",
+          "DB_USER": "${env:DB_USER}",
+          "DB_PASSWORD": "<REDACTED>",
+          "DB_NAME": "${env:DB_NAME}",
+          "SECRET_KEY": "<REDACTED>"
+        }
+      },
+      "functions": {
+        "app": {
+          "handler": "handler.server",
+          "events": [
+            {
+              "httpApi": "*"
+            }
+          ]
+        }
+      },
+      "plugins": [
+        "serverless-offline"
+      ],
+      "custom": {
+        "serverless-offline": {
           "httpPort": 4000
         }
       }

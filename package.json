@@ -1,20 +1,36 @@
 {
   "name": "prueba-tenica-sinapsis",
+  "description": "API's para manejar campañas con Serverless y Express",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "handler.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "nodemon handler.js",
+    "start": "node handler.js",
+    "debug": "DEBUG=* node handler.js",
+    "serverless": "serverless offline"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "serverless",
+    "express",
+    "nodejs",
+    "api",
+    "campaigns",
+    "mysql"
+  ],
+  "author": "Enzo Martinez",
   "license": "ISC",
-  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EnzoMartinez01/PruebaTecnicaSinapsis.git"
+  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.14.0",
+    "nodemon": "^3.1.9",
     "serverless-http": "^3.2.0",
     "swagger-ui-express": "^5.0.1"
   },

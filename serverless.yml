@@ -23,4 +23,4 @@ plugins:
 
 custom:
   serverless-offline:
-    httpPort: 4000
+    httpPort: 3000

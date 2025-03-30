@@ -16,6 +16,10 @@ Este es un proyecto en Node.js con Express para manejar campañas.
    ```sh
    npm install
    ```
+   EN CASO NO SE LOGRE INSTALAR SERVERLESS FRAMEWORK, HACER LO SIGUIENTE:
+   ```sh
+   npm install -g serverless
+   ```
 
 ## Configuración
 
@@ -28,6 +32,7 @@ Crea un archivo `.env` y agrega los datos de tu base de datos:
    DB_PASSWORD=tuContraseña
    DB_NAME=nombreBD
    DB_PORT=3306
+   SECRET_KEY=TuClaveSegura
    ```
 
 ## Uso

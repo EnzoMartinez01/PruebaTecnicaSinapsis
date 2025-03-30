@@ -41,7 +41,7 @@ Para correr en producción:
    ```sh
    npm start
    ```
-o
+o correr con serverless en modo offline:
 ```sh
    serverless offline
    ```

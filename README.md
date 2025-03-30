@@ -20,6 +20,7 @@ Este es un proyecto en Node.js con Express para manejar campañas.
    ```sh
    npm install -g serverless
    ```
+4. Usar MYSQL para la base de datos compartida en el zip.
 
 ## Configuración
 
@@ -62,7 +63,7 @@ Para ejecutar las pruebas con Jest:
 - **POST /auth/login** → Autentica un usuario (LAS CREDENCIALES SON EL NOMBRE DEL CUSTOMER TANTO NAME Y PASSWORD).
 - **PUT /campaigns/:campaignId/calculate-totals** → Calcula los totales de una campaña.
 - **PUT /campaigns/:campaignId/update-status** → Actualiza el estado de una campaña.
-- **GET /campaigns/sucessful-messages** → Obtiene mensajes exitosos.
+- **GET /campaigns/sucessful-messages** → Obtiene mensajes exitosos (Usar parametros startDate y endDate para filtrar por fechas).
 - **GET /campaigns/participation/:customerId** → Obtiene la participación de un usuario.
 
 ## Ejemplo de uso

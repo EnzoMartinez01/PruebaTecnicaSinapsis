@@ -1,0 +1,26 @@
+service: campaign-api
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  environment:
+    DB_HOST: localhost
+    DB_PORT: 3306
+    DB_USER: root
+    DB_PASSWORD: Enzomartinez2412
+    DB_NAME: sinapsisprueba
+    SECRET_KEY: mi_secreto
+
+functions:
+  app:
+    handler: handler.server
+    events:
+      - httpApi: '*'
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 4000
